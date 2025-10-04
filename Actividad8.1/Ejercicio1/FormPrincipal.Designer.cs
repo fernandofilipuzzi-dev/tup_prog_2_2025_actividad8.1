@@ -48,6 +48,7 @@
             btnConfirmar.TabIndex = 0;
             btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = true;
+            btnConfirmar.Click += btnConfirmar_Click;
             // 
             // btnActualizar
             // 

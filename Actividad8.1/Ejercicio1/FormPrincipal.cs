@@ -12,5 +12,16 @@ namespace Ejercicio1
             InitializeComponent();
         }
 
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            #region parseo
+            string nombre = tbNombre.Text;
+            int dni = Convert.ToInt32(tbDNI.Text);
+            double importe = Convert.ToDouble(tbImporte.Text);
+            #endregion
+
+            Cuenta nuevo = new Cuenta(dni, nombre, importe);
+            cuentas.Add(nuevo);
+        }
     }
 }
