@@ -16,7 +16,7 @@
 
         override public string ToString()
         {
-            return $"{ Nombre} ({ DNI})  { Importe: f2}";
+            return $"{ Nombre} ({ DNI})  { Importe:f2}";
         }
 
         public int CompareTo(object otherObject)
