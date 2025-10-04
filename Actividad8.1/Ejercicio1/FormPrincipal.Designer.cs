@@ -70,6 +70,7 @@
             lsbVer.Name = "lsbVer";
             lsbVer.Size = new Size(277, 193);
             lsbVer.TabIndex = 2;
+            lsbVer.SelectedIndexChanged += lsbVer_SelectedIndexChanged;
             // 
             // tbNombre
             // 

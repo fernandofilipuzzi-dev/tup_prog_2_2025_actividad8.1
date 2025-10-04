@@ -33,5 +33,18 @@ namespace Ejercicio1
             }
 
         }
+
+        private void lsbVer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cuenta selectedCuenta = lsbVer.SelectedItem as Cuenta;
+
+            if (selectedCuenta != null)
+            {
+                tbDNI.Text = selectedCuenta.DNI.ToString();
+                tbNombre.Text = selectedCuenta.Nombre;
+                tbImporte.Text = selectedCuenta.Importe.ToString("0.00");
+            }
+
+        }
     }
 }
