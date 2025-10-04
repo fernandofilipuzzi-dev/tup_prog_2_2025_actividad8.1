@@ -23,5 +23,15 @@ namespace Ejercicio1
             Cuenta nuevo = new Cuenta(dni, nombre, importe);
             cuentas.Add(nuevo);
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            lsbVer.Items.Clear();
+            foreach (Cuenta cuenta in cuentas)
+            {
+                lsbVer.Items.Add(cuenta);
+            }
+
+        }
     }
 }
