@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             btnConfirmar = new Button();
-            btnActualizar = new Button();
             lsbVer = new ListBox();
             tbNombre = new TextBox();
             tbDNI = new TextBox();
@@ -37,6 +36,11 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            openFileDialog1 = new OpenFileDialog();
+            saveFileDialog1 = new SaveFileDialog();
+            btnActualizar = new Button();
+            btnImportar = new Button();
+            btnExportar = new Button();
             SuspendLayout();
             // 
             // btnConfirmar
@@ -50,17 +54,6 @@
             btnConfirmar.UseVisualStyleBackColor = true;
             btnConfirmar.Click += btnConfirmar_Click;
             // 
-            // btnActualizar
-            // 
-            btnActualizar.Location = new Point(305, 210);
-            btnActualizar.Margin = new Padding(4);
-            btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new Size(96, 68);
-            btnActualizar.TabIndex = 1;
-            btnActualizar.Text = "Actualizar";
-            btnActualizar.UseVisualStyleBackColor = true;
-            btnActualizar.Click += btnActualizar_Click;
-            // 
             // lsbVer
             // 
             lsbVer.FormattingEnabled = true;
@@ -68,7 +61,7 @@
             lsbVer.Location = new Point(13, 172);
             lsbVer.Margin = new Padding(4);
             lsbVer.Name = "lsbVer";
-            lsbVer.Size = new Size(277, 193);
+            lsbVer.Size = new Size(277, 214);
             lsbVer.TabIndex = 2;
             lsbVer.SelectedIndexChanged += lsbVer_SelectedIndexChanged;
             // 
@@ -126,11 +119,48 @@
             label3.TabIndex = 8;
             label3.Text = "Importe";
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnActualizar
+            // 
+            btnActualizar.Location = new Point(305, 172);
+            btnActualizar.Margin = new Padding(4);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(96, 68);
+            btnActualizar.TabIndex = 1;
+            btnActualizar.Text = "Actualizar";
+            btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.Click += btnActualizar_Click;
+            // 
+            // btnImportar
+            // 
+            btnImportar.Location = new Point(305, 248);
+            btnImportar.Margin = new Padding(4);
+            btnImportar.Name = "btnImportar";
+            btnImportar.Size = new Size(96, 68);
+            btnImportar.TabIndex = 9;
+            btnImportar.Text = "Importar";
+            btnImportar.UseVisualStyleBackColor = true;
+            // 
+            // btnExportar
+            // 
+            btnExportar.Location = new Point(305, 324);
+            btnExportar.Margin = new Padding(4);
+            btnExportar.Name = "btnExportar";
+            btnExportar.Size = new Size(96, 68);
+            btnExportar.TabIndex = 10;
+            btnExportar.Text = "Exportar";
+            btnExportar.UseVisualStyleBackColor = true;
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(407, 371);
+            ClientSize = new Size(407, 398);
+            Controls.Add(btnExportar);
+            Controls.Add(btnImportar);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -153,7 +183,6 @@
         #endregion
 
         private Button btnConfirmar;
-        private Button btnActualizar;
         private ListBox lsbVer;
         private TextBox tbNombre;
         private TextBox tbDNI;
@@ -161,5 +190,10 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private OpenFileDialog openFileDialog1;
+        private SaveFileDialog saveFileDialog1;
+        private Button btnActualizar;
+        private Button btnImportar;
+        private Button btnExportar;
     }
 }
