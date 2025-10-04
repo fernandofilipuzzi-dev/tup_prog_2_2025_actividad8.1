@@ -21,7 +21,28 @@ namespace Ejercicio1
             #endregion
 
             Cuenta nuevo = new Cuenta(dni, nombre, importe);
-            cuentas.Add(nuevo);
+
+            //cuentas.Add(nuevo);
+
+            //agregando lo propio para cumplir el punto 7
+
+            cuentas.Sort();
+            int idx = cuentas.BinarySearch(nuevo);
+            if (idx >= 0)
+            {
+                //actualizo el registro
+                cuentas[idx].Nombre = nuevo.Nombre;
+                cuentas[idx].Importe += nuevo.Importe;  //acumulo 
+            }
+            else
+            {
+                cuentas.Add(nuevo);
+            }
+
+            btnActualizar.PerformClick(); //llama al evento onclick del botón Actualizar
+
+            //fin de la modificación
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
